@@ -1,0 +1,214 @@
+extends layout
+
+block content
+	//Navigation
+	nav.navbar.navbar-expand-lg.navbar-light.fixed-top#mainNav
+		.container
+			a(href="#page-top").navbar-brand.js-scroll-trigger Gunny Sack
+			button( class='navbar-toggler navbar-toggler-right', type='button',data-toggle = 'collapse',data-target="#navbarResponsive", aria-controls="navbarResponsive", aria-expanded="false", aria-label="Toggle navigation")
+				span.navbar-toggler-icon
+			#navbarResponsive.collapse.navbar-collapse
+				ul.navbar-nav.ml-auto
+					li.nav-item
+						a(href="#about").nav-link.js-scroll-trigger About
+					li.nav-item
+						a(href="#services").nav-link.js-scroll-trigger Services
+					li.nav-item
+						a(href="#portfolio").nav-link.js-scroll-trigger Portfolio
+					li.nav-item
+						a(href="#contact").nav-link.js-scroll-trigger Contact
+	//Landing page
+	header.masthead.text-center.text-white.d-flex
+		.container.my-auto
+			.row
+				.col-12.col-md-8
+					.col-lg-10.mx-auto
+						h1.text-uppercase Your One Stop Recycling Centre
+						hr
+					.col-lg-8.mx-auto
+						p.text-faded.mb-5
+							|Never stop recycling! Save the earth, do your part today!
+						a(href="#about").btn.btn-primary.btn-xl.js-scroll-trigger Find Out More
+				.col-md-4.mt-4
+					button.btn.btn-success.btn-lg.btn-block(data-toggle="modal",data-target="#login-modal") Login Now!
+					button.btn.btn-secondary.btn-lg.btn-block Sign Up Now!
+	
+	//Model
+	.modal.fade#login-modal(tabindex="-1",role="dialog",aria-labelledby="login-modal",aria-hidden="true")
+		.modal-dialog(role="login-box")
+			.modal-content
+				.modal-header
+					h5.modal-title Login to GunnySack!
+					button.close(type="button",data-dismiss="modal",aria-label="close")
+						span(aria-hidden="true") &times;
+				.modal-body
+					form
+						.form-group
+							label Email
+							input.form-control(type="email",name="email",placeholder ="Enter your email",aria-describedby="emailHelp")
+						.form-group
+							label Password
+							input.form-control(type="password",name="password",placeholder ="Enter your password",aria-describedby="emailHelp")
+						.form-group.form-check
+							input.form-check-input(type="checkbox",name="remember")
+							label.form-check-label Remember me
+				.model-footer.pb-2.pl-2.mx-auto
+					button.btn.btn-success Login
+					button.btn.btn-secondary Sign Up
+
+
+
+
+	//Information - Sign up
+	section.bg-primary#about
+		.container
+			.row
+				.col-lg-8.mx-auto.text-center
+					h2.section-heading.text-white About Us
+					hr.light.my-4
+					p.text-faded.mb-4
+						|We want to increase Singapore’s recycling rate by offering an on demand pick-up recycling service. Singapore’s recycling rate has been very low and we can do our part to increase the numbers. Sorting out our trash is our responsibility and it can be part of our lifestyle.
+						br
+						br
+						|No More Hussle!
+						br
+						br
+						|With GUNNY SACK, you can now trade in your recyclables conveniently.
+						br
+						|We pay you cash for your recyclables! Simply collect enough recyclables and request for our pick-up service at your own convenience.
+						br
+						br
+						|Do not know what to recycle?
+						br
+						br
+						|It’s easy. Create an account with us and our recycling page will tell you in detail about what can be recycled in Singapore.
+						br
+						br
+						|There’s no more time to waste. Start recycling now!
+						br
+						br
+						|Sign up with us!
+	//Describe our services
+	section#services
+		.container
+			.row
+				.col-lg-12.text-center
+					h2.section-heading At Your Service
+					hr.my-4
+		.container
+			.row
+				.col-lg-3.col-md-6.text-center
+					.service-box.mt-5.mx-auto
+						i.fa.fa-4x.fa-recycle.text-primary.mb-3.sr-icons
+						h3.mb-3 Fully Committed
+						p.text-muted.mb-0
+							|Our collectors are running 7 days a week!
+				.col-lg-3.col-md-6.text-center
+					.service-box.mt-5.mx-auto
+						i.fa.fa-4x.fa-paper-plane.text-primary.mb-3.sr-icons
+						h3.mb-3 Ready to Collect
+						p.text-muted.mb-0
+							|Choose freely from our available schedule!
+				.col-lg-3.col-md-6.text-center
+					.service-box.mt-5.mx-auto
+						i.fa.fa-4x.fa-newspaper-o.text-primary.mb-3.sr-icons
+						h3.mb-3 What We Collect
+						p.text-muted.mb-0
+							|From old newspaper to bulky electronic. We accept a wide variety if items, sign up now to check them!
+				.col-lg-3.col-md-6.text-center
+					.service-box.mt-5.mx-auto
+						i.fa.fa-4x.fa-heart.text-primary.mb-3.sr-icons
+						h3.mb-3 Save the Earth
+						p.text-muted.mb-0
+							|We have done ours, do yours today!
+
+	//What we have done with the community
+	section#portfolio.p-0
+		.container-fluid.p-0
+			.row.no-gutters.popup-gallery
+				.col-lg-4.col-sm-6
+					a(href='./images/portfolio/fullsize/1.jpg').portfolio-box
+						img(src='./images/portfolio/thumbnails/1.jpg',alt=' ').img-fluid
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded
+									|Category
+								.project-name
+									|Project Name
+				.col-lg-4.col-sm-6
+					a(href='./images/portfolio/fullsize/2.jpg').portfolio-box
+						img(src='./images/portfolio/thumbnails/2.jpg',alt='').img-fluid
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded
+									|Category
+								.project-name
+									|Project Name
+				.col-lg-4.col-sm-6
+					a(href='./images/portfolio/fullsize/3.jpg').portfolio-box
+						img(src='./images/portfolio/thumbnails/3.jpg',alt='').img-fluid
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded
+									|Category
+								.project-name
+									|Project Name
+				.col-lg-4.col-sm-6
+					a(href='./images/portfolio/fullsize/4.jpg').portfolio-box
+						img(src='./images/portfolio/thumbnails/4.jpg',alt='').img-fluid
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded
+									|Category
+								.project-name
+									|Project Name
+				.col-lg-4.col-sm-6
+					a(href='./images/portfolio/fullsize/5.jpg').portfolio-box
+						img(src='./images/portfolio/thumbnails/5.jpg',alt='').img-fluid
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded
+									|Category
+								.project-name
+									|Project Name
+				.col-lg-4.col-sm-6
+					a(href='./images/portfolio/fullsize/6.jpg').portfolio-box
+						img(src='./images/portfolio/thumbnails/6.jpg',alt='').img-fluid
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded
+									|Category
+								.project-name
+									|Project Name
+
+	//Download Appl
+	section.bg-dark.text-white
+		.container.text-center
+			h2.mb-4
+				Free Download at Play Store and Apple Store!
+			a(href="#").btn.btn-light.btn-xl.sr-button
+				|Download Now!
+
+	//Contact Us
+	section#contact
+		div.container
+			.row
+				div.col-lg-8.mx-auto.text-center
+					h2.section-heading
+						|Let's Get In Touch!
+					hr.my-4
+					p.mb-5
+						|Let us know how can we do better! Or any business related enquiry, give us a call or send us an email and we will get back to you as soon as possible!
+			.row
+				.col-lg-4.ml-auto.text-center
+					i.fa.fa-phone.fa-3x.mb-3.sr-contact
+					p
+						|+65 9876 5432
+				.col-lg-4.mr-auto.text-center
+					i.fa.fa-envelope-o.fa-3x.mb-3.sr-contact
+					p
+						a(href="mailto:your-email@your-domain.com")
+							|support@gb.sg
+
+	//Load JS
+	include ./javascript.jade
