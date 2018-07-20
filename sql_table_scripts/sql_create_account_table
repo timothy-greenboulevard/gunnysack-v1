@@ -1,0 +1,13 @@
+CREATE TABLE account(
+ uid serial PRIMARY KEY,
+ username VARCHAR (50) UNIQUE NOT NULL,
+ password VARCHAR (50) NOT NULL,
+ email VARCHAR (355) UNIQUE NOT NULL,
+ fname VARCHAR (50) NOT NULL,
+ lname VARCHAR (50) NOT NULL,
+ address VARCHAR (160),
+ postal_code VARCHAR (6),
+ reward_point INT,
+ created_on TIMESTAMP NOT NULL,
+ last_login TIMESTAMP
+);

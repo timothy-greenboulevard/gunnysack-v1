@@ -6,7 +6,7 @@ http://vitaly-t.github.io/pg-promise/index.html
 
 install
 ```
-npm install pg-promise
+npm install --save pg-promise
 ```
 
 Getting ORM for database
