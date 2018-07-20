@@ -11,8 +11,13 @@
     "express": "^4.16.3",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
+    "mongodb": "^3.1.0",
     "morgan": "~1.9.0",
+
     "startbootstrap-modern-business": "^4.1.1",
+
+    "pg-promise": "^8.4.5",
+
     "stylus": "0.54.5"
   },
   "main": "app.js",
