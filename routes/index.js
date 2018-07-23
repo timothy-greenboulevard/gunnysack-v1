@@ -1,3 +1,4 @@
+var models  = require('../models');
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
@@ -24,8 +25,13 @@ router.get('/home',function(req, res, next){
 
 //GET DB ***TESTING REMOVE AFTER USE***
 router.get('/db',function(req, res, next){
-  res.render('dbTest',{ title: 'Testing DB' })
+  models.account.findAll({
+  }).then(function(account) {
+    res.render('dbtest', {
+      title: 'Sequelize: Express Example',
+      account: account
+    });
+  });
 });
-
 
 module.exports = router;
