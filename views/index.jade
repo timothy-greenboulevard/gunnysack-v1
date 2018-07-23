@@ -30,31 +30,58 @@ block content
 							|Never stop recycling! Save the earth, do your part today!
 						a(href="#about").btn.btn-primary.btn-xl.js-scroll-trigger Find Out More
 				.col-md-4.mt-4
-					button.btn.btn-success.btn-lg.btn-block(data-toggle="modal",data-target="#login-modal") Login Now!
-					button.btn.btn-secondary.btn-lg.btn-block Sign Up Now!
+					a.btn.btn-success.btn-lg.btn-block(href="/login") Login Now!
+					a.btn.btn-secondary.btn-lg.btn-block(href="/register") Sign Up Now!
 	
-	//Model
-	.modal.fade#login-modal(tabindex="-1",role="dialog",aria-labelledby="login-modal",aria-hidden="true")
-		.modal-dialog(role="login-box")
-			.modal-content
-				.modal-header
-					h5.modal-title Login to GunnySack!
-					button.close(type="button",data-dismiss="modal",aria-label="close")
-						span(aria-hidden="true") &times;
-				.modal-body
-					form
-						.form-group
-							label Email
-							input.form-control(type="email",name="email",placeholder ="Enter your email",aria-describedby="emailHelp")
-						.form-group
-							label Password
-							input.form-control(type="password",name="password",placeholder ="Enter your password",aria-describedby="emailHelp")
-						.form-group.form-check
-							input.form-check-input(type="checkbox",name="remember")
-							label.form-check-label Remember me
-				.model-footer.pb-2.pl-2.mx-auto
-					button.btn.btn-success Login
-					button.btn.btn-secondary Sign Up
+	//- //Login Model
+	//- .modal.fade#login-modal(tabindex="-1",role="dialog",aria-labelledby="login-modal",aria-hidden="true")
+	//- 	.modal-dialog(role="login-box")
+	//- 		.modal-content
+	//- 			.modal-header
+	//- 				h5.modal-title Login to GunnySack!
+	//- 				button.close(type="button",data-dismiss="modal",aria-label="close")
+	//- 					span(aria-hidden="true") &times;
+	//- 			.modal-body
+	//- 				form(novalidate='')
+	//- 					.form-group
+	//- 						label.control-label(for="email") Email
+	//- 						input#email.form-control(type="email",name="email",placeholder ="Enter your email",aria-describedby="emailHelp", required='')
+	//- 						.valid-feedback Success! You've done it.
+	//- 						.invalid-feedback No, you missed this one.
+	//- 					.form-group
+	//- 						label Password
+	//- 						input.form-control(type="password",name="password",placeholder ="Enter your password",aria-describedby="emailHelp")
+	//- 					.form-group.form-check
+	//- 						input.form-check-input(type="checkbox",name="remember")
+	//- 						label.form-check-label Remember me
+	//- 			.model-footer.pb-2.pl-2.mx-auto
+	//- 				button.btn.btn-success Login
+	//- 				button.btn.btn-secondary(data-toggle="modal",data-target="#register-modal") Sign Up
+	
+	//- //Register Model
+	//- .modal.fade#register-modal(tabindex="-1",role="dialog",aria-labelledby="register-modal",aria-hidden="true")
+	//- 	.modal-dialog(role="register-box")
+	//- 		.modal-content
+	//- 			.modal-header
+	//- 				h5.modal-title Register an account at GunnySack!
+	//- 				button.close(type="button",data-dismiss="modal",aria-label="close")
+	//- 					span(aria-hidden="true") &times;
+	//- 			.modal-body
+	//- 				form
+	//- 					.form-group
+	//- 						label Email
+	//- 						input.form-control(type="email",name="email",placeholder ="Enter your email",aria-describedby="emailHelp")
+	//- 					.form-group
+	//- 						label Password
+	//- 						input.form-control(type="password",name="password",placeholder ="Enter your password",aria-describedby="emailHelp")
+	//- 					.form-group
+	//- 						label Re-enter Password
+	//- 						input.form-control(type="password",name="password",placeholder ="Re-enter your password",aria-describedby="emailHelp")
+	//- 					.form-group
+	//- 						label Username
+	//- 						input.form-control(type="text",name="username",placeholder ="Enter your desired username",aria-describedby="emailHelp")
+	//- 			.model-footer.pb-2.pl-2.mx-auto
+	//- 				button.btn.btn-success Submit
 
 
 

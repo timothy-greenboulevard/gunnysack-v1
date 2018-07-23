@@ -1,27 +1,54 @@
-.container
-	h3.omb_authTitle
-		|Login or 
-		a(href="#") Sign Up
-	.omb_login
-		.row.omb_row-sm-offset-3.omb_socialButtons
-			.col-xs-8.col-sm-4
-				a(href="#").btn.btn-lg.btn-block.omb_btn-facebook
-					i.fa.fa-facebook.visible-xs
-					span.hidden-xs
-						| Facebook
-			.col-xs-8.col-sm-4
-				a(href="#").btn.btn-lg.btn-block.omb_btn-google
-					i.fa.fa-google-plus.visible-xs
-					span.hidden-xs
-						| Google+
-		.row.omb_row-sm-offset-3.omb_loginOr
-			.col-xs-12.col-sm-6
-				hr.omb_hrOr
-				span.omb_spanOr Or
-		.row.omb_row-sm-offset-3
-			.col-xs-12.col-sm-6
-				form.omb_loginForm(action="",method="POST")
-					.input-group
-						span.input-group-addon
-							i.fa.fa-user
-						input.form-control(type="text",placeholder="Email Address",name="username")
+//- .container
+//- 	h3.omb_authTitle
+//- 		|Login or 
+//- 		a(href="#") Sign Up
+//- 	.omb_login
+//- 		.row.omb_row-sm-offset-3.omb_socialButtons
+//- 			.col-xs-8.col-sm-4
+//- 				a(href="#").btn.btn-lg.btn-block.omb_btn-facebook
+//- 					i.fa.fa-facebook.visible-xs
+//- 					span.hidden-xs
+//- 						| Facebook
+//- 			.col-xs-8.col-sm-4
+//- 				a(href="#").btn.btn-lg.btn-block.omb_btn-google
+//- 					i.fa.fa-google-plus.visible-xs
+//- 					span.hidden-xs
+//- 						| Google+
+//- 		.row.omb_row-sm-offset-3.omb_loginOr
+//- 			.col-xs-12.col-sm-6
+//- 				hr.omb_hrOr
+//- 				span.omb_spanOr Or
+//- 		.row.omb_row-sm-offset-3
+//- 			.col-xs-12.col-sm-6
+//- 				form.omb_loginForm(action="",method="POST")
+//- 					.input-group
+//- 						span.input-group-addon
+//- 							i.fa.fa-user
+//- 						input.form-control(type="text",placeholder="Email Address",name="username")
+.container.text-center
+	form.needs-validation(novalidate='')
+		.form-row
+			.col-md-5.5
+			label(for='validationCustomUsername') Username
+			.input-group
+				.input-group-prepend
+				span#inputGroupPrepend.input-group-text @
+				input#validationCustomUsername.form-control(type='text', placeholder='Username', aria-describedby='inputGroupPrepend', required='')
+				.invalid-feedback
+					| Please input a username.
+		.form-row
+			.col-md-5
+			label(for='validationPassword') Password
+			input#validationPassword.form-control(type='password', placeholder='Password', required='')
+			.invalid-feedback
+				| Please input your password.
+		.form-group
+			.form-check
+			input#invalidCheck.form-check-input(type='checkbox', value='')
+			label.form-check-label(for='invalidCheck')
+				| Remember Me
+		br
+		button.btn.btn-primary(type='submit') Login
+		br
+		a(href="/register") No account yet? Click here to register one!
+
