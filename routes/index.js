@@ -1,5 +1,6 @@
 var models  = require('../models');
 var express = require('express');
+var app = express();
 var router = express.Router();
 var pg = require('pg');
 
@@ -8,10 +9,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Gunny Sack' });
 });
 
-//GET Login Page
-router.get('/login', function(req, res, next) {
-  res.render('login', { title: 'Login - Gunny Sack' });
-});
 
 //GET Register Page
 router.get('/register', function(req, res, next) {
