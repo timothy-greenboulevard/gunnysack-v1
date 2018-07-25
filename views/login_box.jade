@@ -26,25 +26,25 @@
 //- 							i.fa.fa-user
 //- 						input.form-control(type="text",placeholder="Email Address",name="username")
 .container.text-center
-	form.needs-validation(novalidate='')
+	form.needs-validation(novalidate='',action="/api/login",method="post")
 		.form-row
 			.col-md-5.5
 			label(for='validationCustomUsername') Username
 			.input-group
 				.input-group-prepend
 				span#inputGroupPrepend.input-group-text @
-				input#validationCustomUsername.form-control(type='text', placeholder='Username', aria-describedby='inputGroupPrepend', required='')
+				input#validationCustomUsername.form-control(type='text', placeholder='Username', aria-describedby='inputGroupPrepend', name="username", required='')
 				.invalid-feedback
 					| Please input a username.
 		.form-row
 			.col-md-5
 			label(for='validationPassword') Password
-			input#validationPassword.form-control(type='password', placeholder='Password', required='')
+			input#validationPassword.form-control(type='password', placeholder='Password', name="password",required='')
 			.invalid-feedback
 				| Please input your password.
 		.form-group
 			.form-check
-			input#invalidCheck.form-check-input(type='checkbox', value='')
+			input#invalidCheck.form-check-input(type='checkbox', value='true',name="remember")
 			label.form-check-label(for='invalidCheck')
 				| Remember Me
 		br

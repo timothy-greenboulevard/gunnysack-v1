@@ -1,0 +1,1 @@
+sequelize model:create --force --name account --attributes uid:integer,username:string,password:string,email:string,fname:string,lname:string,address:string,postal_code:string,reward_point:integer,created_on:date,last_login:date
