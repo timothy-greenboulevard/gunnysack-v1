@@ -27,10 +27,10 @@ app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-//This must be the last
-app.use('/', indexRouter);
 app.use('/api', apiRouter);
 app.use('/login',loginRouter);
+//This must be the last
+app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

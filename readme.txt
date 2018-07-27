@@ -17,3 +17,7 @@ install
 npm install --save sequelize
 npm install --save pg pg-hstore
 ```
+
+creating controller folder for restful API for future usage. 
+
+an example can be seen from account_modek.js and login.js
