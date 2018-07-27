@@ -15,9 +15,9 @@ router.post('/login_process', function(req, res, next) {
 
 //GET Login Page
 router.get('/', function(req, res, next) {
+	res.render('login', { title: 'Login - Gunny Sack' });
 	models.account.findAll().then((account) => {
 		console.log(account[0].dataValues);
-		res.render('login', { title: 'Login - Gunny Sack' });
 	}).catch((error) => { res.status(400).send(error); })
     
 });

@@ -1,24 +1,24 @@
 .container
-  form.needs-validation(novalidate='')
+  form.needs-validation(novalidate='',action="/register/process",method="post")
     .form-row
       .col-md-4.mb-3
         label(for='validationCustomUsername') Username
         .input-group
           .input-group-prepend
             span#inputGroupPrepend.input-group-text @
-          input#validationCustomUsername.form-control(type='text', placeholder='Username', aria-describedby='inputGroupPrepend', required='')
+          input#validationCustomUsername.form-control(type='text', placeholder='Username', aria-describedby='inputGroupPrepend', required='',name='username')
           .invalid-feedback
             | Please choose a username.
       .col-md-4.mb-3
         label(for='validationPassword') Password
-        input#validationPassword.form-control(type='password', placeholder='Password', required='')
+        input#validationPassword.form-control(type='password', placeholder='Password', required='' ,name='password1')
         .valid-feedback
           | Looks good!
         .invalid-feedback
           | Please input a valid password (1 Uppercase letter, 7 characters minimum)
       .col-md-4.mb-3
         label(for='validationPassword2') Retype Password
-        input#validationPassword2.form-control(type='password', placeholder='Retype Password', required='')
+        input#validationPassword2.form-control(type='password', placeholder='Retype Password', required='', name='password2')
         .valid-feedback
           | Looks good!
         .invalid-feedback
@@ -27,14 +27,14 @@
     .form-row
       .col-md-4.mb-3
         label(for='validationEmail') Email
-        input#validationEmail.form-control(type='text', placeholder='user@email.com', required='')
+        input#validationEmail.form-control(type='text', placeholder='user@email.com', required='',name='email')
         .valid-feedback
           | Looks good!
         .invalid-feedback
           | Please input a valid email.
       .col-md-4.mb-3
         label(for='validationContact') Contact number
-        input#validationContact.form-control(type='number', placeholder='Contact no.', required='')
+        input#validationContact.form-control(type='number', placeholder='Contact no.', required='',name='contact')
         .valid-feedback
           | Looks good!
         .invalid-feedback
@@ -43,28 +43,28 @@
     .form-row
       .col-md-4.mb-3
         label(for='validationCustom01') First name
-        input#validationCustom01.form-control(type='text', placeholder='First name', value='Mark', required='')
+        input#validationCustom01.form-control(type='text', placeholder='First name', value='Mark', required='',name='fname')
         .valid-feedback
           | Looks good!
       .col-md-4.mb-3
         label(for='validationCustom02') Last name
-        input#validationCustom02.form-control(type='text', placeholder='Last name', value='Otto', required='')
+        input#validationCustom02.form-control(type='text', placeholder='Last name', value='Otto', required='',name='lname')
         .valid-feedback
           | Looks good!
     .form-row
       .col-md-6.mb-3
         label(for='validationCustom03') Address
-        input#validationCustom03.form-control(type='text', placeholder='Address', required='')
+        input#validationCustom03.form-control(type='text', placeholder='Address', required='',name='address')
         .invalid-feedback
           | Please provide a valid Address.
       .col-md-3.mb-3
         label(for='validationCustom05') Postal Code
-        input#validationCustom05.form-control(type='text', placeholder='Postal Code', required='')
+        input#validationCustom05.form-control(type='text', placeholder='Postal Code', required='',name='postal')
         .invalid-feedback
           | Please provide a valid Postal Code.
     .form-group
       .form-check
-        input#invalidCheck.form-check-input(type='checkbox', value='', required='')
+        input#invalidCheck.form-check-input(type='checkbox', value='', required='',name='terms')
         label.form-check-label(for='invalidCheck')
           | Agree to 
         a(href='/tnc') 
