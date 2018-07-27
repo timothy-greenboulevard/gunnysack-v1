@@ -1,17 +1,17 @@
 {
   "development": {
-    "username": "admin",
+    "username": "dev",
     "password": "password",
-    "database": "GreenBoulevard",
-    "host": "127.0.0.1",
+    "database": "greenboulevard",
+    "host": "35.240.178.1",
     "port":"5432",
     "dialect": "postgres"
   },
   "test": {
-    "username": "admin",
+    "username": "dev",
     "password": "password",
-    "database": "GreenBoulevard",
-    "host": "127.0.0.1",
+    "database": "greenboulevard",
+    "host": "35.240.178.1",
     "port":"5432",
     "dialect": "postgres"
   },

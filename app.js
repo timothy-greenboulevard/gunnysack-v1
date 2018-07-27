@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
 var loginRouter = require('./routes/login');
+var registerRouter = require('./routes/register');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', apiRouter);
 app.use('/login',loginRouter);
+app.use('/register',registerRouter);
 //This must be the last
 app.use('/', indexRouter);
 
