@@ -45,8 +45,8 @@ router.post('/process', function(req, res, next) {
   }
 
   //checks for empty responses
-  for(String s_check : string_array){
-    if(isEmpty(s_check)){
+  for(var scheck in string_array){
+    if(isEmpty(scheck)){
         empty_check = false;
         break;
     }
@@ -73,7 +73,7 @@ router.post('/process', function(req, res, next) {
   }
   
   if(terms_check && empty_check &&  user_check && email_check && password_check && contact_check && postal_check){
-
+    console.log("PASS!");
   }
 
 });

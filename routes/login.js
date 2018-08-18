@@ -23,6 +23,6 @@ router.get('/', function(req, res, next) {
 });
 
 //restful API example to use when developing mobile app!
-router.get('/test',accountController.list);
+//router.get('/test',accountController.list);
 
 module.exports = router;
