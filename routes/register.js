@@ -1,4 +1,4 @@
-var models  = require('../models');
+const account  = require('../models').account;
 var express = require('express');
 var app = express();
 var router = express.Router();
@@ -73,10 +73,20 @@ router.post('/process', function(req, res, next) {
   }
   
   if(terms_check && empty_check &&  user_check && email_check && password_check && contact_check && postal_check){
-    console.log("PASS!");
-  }
+      console.log("Passed!");
+      account.create({ username: username , password: pass1, email: email, fname: fname, lname: lname , address: address, postal_code: postal , created_on: new Date() }, { fields: [ "username","password","email","fname","lname","address","postal_code","created_on" ] }).then(task => {
+        // you can now access the newly created task via the variable task
+        res.redirect('/');
+      }).catch(error => {
+        console.log(error.errors);
+        console.log(error.errors[0].path);
+      })
+    //end checking condition
+    }
 
 });
+
+
 
 function isEmpty(str) {
     return (!str || 0 === str.length);
